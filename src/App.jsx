@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from '@/layout/Navbar'
+import { Footer } from '@/layout/Footer'
 import { Hero } from '@/sections/Hero'
 import { About } from '@/sections/About'
 import { Experience } from '@/sections/Experience'
@@ -23,6 +24,7 @@ function PortfolioContent() {
         <Testimonials mode={mode} />
         <Contact mode={mode} />
       </main>
+      <Footer />
     </div>
   );
 }

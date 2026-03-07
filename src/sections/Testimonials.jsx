@@ -1,8 +1,8 @@
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useState } from "react";
 
 const content = {
   software: {
-    pdesc: "A timeline of my professional growth, from curious beginner to senior engineer leading teams and building products at scale.",
     tms: [
     {
         quote:
@@ -39,7 +39,6 @@ const content = {
     ],
   },
   designer: {
-    pdesc: "A timeline of my professional growth, from curious beginner to senior engineer leading teams and building products at scale.",
     tms: [
     {
         quote:
@@ -78,8 +77,18 @@ const content = {
 };
 
 export const Testimonials = ({ mode }) => {
+    const [activeIdx, setActiveIdx] = useState(0);
+
     const data = content[mode];
     const testimonials = data.tms;
+
+    const next = () => {
+        setActiveIdx((prev) => (prev + 1) % testimonials.length);
+    }
+
+    const previous = () => {
+        setActiveIdx((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    }
 
     return (
         <section id="testimonials" className="py-32 relative overflow-hidden">
@@ -112,39 +121,39 @@ export const Testimonials = ({ mode }) => {
                                 <Quote className="w-6 h-6 text-primary-foreground" />
                             </div>
                             <blockquote className="text-xl md:text-2xl font-medium italic leading-relaxed mb-8 pt-4">
-                                "{testimonials[0].quote}"
+                                "{testimonials[activeIdx].quote}"
                             </blockquote>
                             <div className="flex items-center gap-4">
                                 <img 
-                                src={testimonials[0].avatar} 
-                                alt={testimonials[0].author} 
+                                src={testimonials[activeIdx].avatar} 
+                                alt={testimonials[activeIdx].author} 
                                 className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                                 />
                                 {/* <div className="flex items-center gap-4"> */}
                                 <div>
                                     <div className="font-semibold">
-                                        {testimonials[0].author}
+                                        {testimonials[activeIdx].author}
                                     </div>
                                     <div className="text-sm text-muted-foreground">
-                                        {testimonials[0].role}
+                                        {testimonials[activeIdx].role}
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Testimonal Navigation */}
-                        <div>
-                            <button>
+                        <div className="flex items-center justify-center gap-4 mt-8">
+                            <button className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all" onClick={previous}>
                                 <ChevronLeft />
                             </button>
                             
-                            <div>
+                            <div className="flex gap-2">
                                 {testimonials.map((_, idx) => (
-                                    <button key={idx} />
+                                    <button key={idx} className={`w-2 h-2 rounded-full transition-all duration-300 ${idx == activeIdx ? "w-8 bg-primary" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`} onClick={() => setActiveIdx(idx)} />
                                 ))}
                             </div>
 
-                            <button>
+                            <button className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all" onClick={next}>
                                 <ChevronRight />
                             </button>
                         </div>
