@@ -2,61 +2,55 @@ import { Button } from "@/components/Button";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { ArrowRight, ChevronDown, Download, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
+const socialLinks = [
+  { icon: Mail, href: "mailto:dkashwin576@gmail.com"},
+  { icon: Linkedin, href: "https://www.linkedin.com/in/ashwindhakal007"},
+  { icon: Github, href: "https://github.com/theeddiestudio"},
+  { icon: MessageCircle, href: "https://wa.me/9844888978"},
+];
+
 const content = {
   software: {
     badge1: "Software Engineer",
-    badge2: "Fullstack Developer",
-    cvPath: "/software.pdf",
+    badge2: "Fullstack Web Developer",
+    cvPath: "/Ashwin_Dhakal_Software_CV.pdf",
     cvName: "Ashwin_Dhakal_Software_CV.pdf",
-    exp: "2+",
-    sub: "Namaste, I'm Ashwin Dhakal — A Fullstack Software Developer specializing in MERN/PERN Stacks. I build responsive websites that users love.",
+    exp: "3+",
+    sub: "Namaste, I'm Ashwin Dhakal — A Fullstack Software Developer specializing in MERN/PERN Stacks as well as Flutter programming. I build responsive websites and design UI/UX that resonates with users.",
     skills: [
         "React",
-        "Next.js",
-        "TypeScript",
         "Node.js",
-        "GraphQL",
         "PostgreSQL",
         "MongoDB",
-        "Redis",
+        "Python",
         "Docker",
-        "AWS",
-        "Vercel",
-        "Tailwind CSS",
-        "Prisma",
-        "Jest",
-        "Cypress",
+        "C-Sharp",
+        "ExpressJS",
+        "TailwindCSS",
+        "C/C++ Programming",
+        "Linux",
         "Figma",
         "Git",
         "GitHub Actions",
     ]
   },
   designer: {
-    badge1: "Graphics Designer",
+    badge1: "Graphic Designer",
     badge2: "UI/UX Designer",
-    cvPath: "/designer.pdf",
+    cvPath: "/Ashwin_Dhakal_Designer_CV.pdf",
     cvName: "Ashwin_Dhakal_Designer_CV.pdf",
     exp: "5+",
-    sub: "Namaste, I'm Ashwin Dhakal — A Graphic & UI/UX Designer specializing in Figma and Brand Identity. I create stunning visuals that convert.",
+    sub: "Namaste, I'm Ashwin Dhakal. I excel in designing UI and crafting promotional videos and designs with modern and minimal looks includes banners, cards, 3D models and certificates and brand identities.",
     skills: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
-        "Docker",
-        "AWS",
-        "Vercel",
-        "Tailwind CSS",
-        "Prisma",
-        "Jest",
-        "Cypress",
+        "Photoshop",
+        "Illustrator",
+        "Premiere Pro",
+        "Blender3D",
+        "Canva",
+        "Corel Draw",
+        "Wondershare Filmora",
         "Figma",
-        "Git",
-        "GitHub Actions",
+        "Programming Tools",
     ]
   }
 };
@@ -133,12 +127,7 @@ export const Hero = ({ mode }) => {
                     { /* Social Media */}
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-500">
                         <span className=" text-md font-bold text-muted-foreground">Visit:</span>
-                        {[
-                            { icon: Mail, href: "mailto:dkashwin576@gmail.com"},
-                            { icon: Linkedin, href: "https://www.linkedin.com/in/ashwindhakal007"},
-                            { icon: Github, href: "https://github.com/theeddiestudio"},
-                            { icon: MessageCircle, href: "https://wa.me/9844888978"},
-                        ].map((social, index) => (
+                        {socialLinks.map((social, index) => (
                             <a 
                                 key={index} 
                                 href={social.href} 

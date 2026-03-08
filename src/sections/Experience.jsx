@@ -1,6 +1,6 @@
 const content = {
   software: {
-    pdesc: "A timeline of my professional growth, from curious beginner to senior engineer leading teams and building products at scale.",
+    pdesc: "A timeline of my professional growth, from curious beginner to established developer building products at high scale and rapid rate.",
     exps: [
     {
         period: "2022 — Present",
@@ -41,7 +41,7 @@ const content = {
     ],
   },
   designer: {
-    pdesc: "A timeline of my professional growth, from curious beginner to senior engineer leading teams and building products at scale.",
+    pdesc: "A timeline of my professional growth, from beginner designer to experienced creator producing designs at high scale and rapid rate.",
     exps: [
         {
         period: "2022 — Present",

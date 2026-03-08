@@ -1,16 +1,10 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Mail, MessageCircle, Github, Linkedin } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-];
-
-const footerLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { icon: Mail, href: "mailto:dkashwin576@gmail.com"},
+  { icon: Linkedin, href: "https://www.linkedin.com/in/ashwindhakal007"},
+  { icon: Github, href: "https://github.com/theeddiestudio"},
+  { icon: MessageCircle, href: "https://wa.me/9844888978"},
 ];
 
 export const Footer = () => {

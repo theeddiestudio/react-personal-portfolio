@@ -1,19 +1,18 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { BicepsFlexed, Code2, Lightbulb, Rocket, Users } from "lucide-react";
 
 const content = {
   software: {
-    p1: `I'm a passionate software engineer with over 5 years of
+    header: "Building the future,",
+    p1: `I'm a passionate software engineer with over 3 years of
         experience crafting digital products that make a difference. My
-        journey started with a curiosity for how things work on the web,
-        and it has evolved into a deep expertise in modern frontend
-        technologies.`,
-    p2: `I specialize in React, Next.js, and TypeScript, building
+        journey started when I was very little with a curiosity for how things work on the web,
+        and it has evolved into deep knowledge of the frontend and backend side of the web.`,
+    p2: `I specialize in React, Node.js, PostgresSQL as well as MongoDB, building
         everything from sleek landing pages to complex enterprise
         applications. My approach combines technical excellence with a
         keen eye for design and user experience.`,
-    p3: `When I'm not coding, you'll find me exploring new technologies,
-        contributing to open-source projects, or sharing knowledge with
-        the developer community.`,
+    p3: `When I'm not actively participating in software design, you'll find me exploring new technologies and knowledge
+        or working on artificial intelligence technologies.`,
     hls: [
     {
         icon: Code2,
@@ -44,30 +43,26 @@ const content = {
             use and developers love to maintain."`
   },
   designer: {
-    p1: `I'm a passionate software engineer with over 5 years of
-        experience crafting digital products that make a difference. My
-        journey started with a curiosity for how things work on the web,
-        and it has evolved into a deep expertise in modern frontend
-        technologies.`,
-    p2: `I specialize in React, Next.js, and TypeScript, building
-        everything from sleek landing pages to complex enterprise
-        applications. My approach combines technical excellence with a
-        keen eye for design and user experience.`,
-    p3: `When I'm not coding, you'll find me exploring new technologies,
-        contributing to open-source projects, or sharing knowledge with
-        the developer community.`,
+    header: "Portraying the moment,",
+    p1: `I'm a passionate graphic designer with over 5 years of
+        experience creating designs and models that pleases the customers. My
+        journey started during the Covid-19 pandemic when I started taking online courses on Adobe Illustrator as well as Blender3D.`,
+    p2: `I worked for a variety of political as well as non political organisations during my college and specialised in banners, certificates, caricatures, UI/UX designs and brand identities.
+        During this period I have designed over 350 designs as well as over 10 web user interfaces.`,
+    p3: `During my leisure periods, I am learning about modern designs and user experiences.
+        In addition to graphic design, I am also excellent in coding and have 3+ years of coding experience.`,
     hls: [
     {
-        icon: Code2,
-        title: "Clean Code",
+        icon: BicepsFlexed,
+        title: "Hard At Work",
         description:
-        "Writing maintainable, scalable code that stands the test of time.",
+        "Crafting modern designs and sleek user interfaces with hard-boiled dedication.",
     },
     {
         icon: Rocket,
         title: "Performance",
         description:
-        "Optimizing for speed and delivering lightning-fast user experiences.",
+        "Optimizing for speed and delivering fast results even under urgent conditions.",
     },
     {
         icon: Users,
@@ -78,12 +73,11 @@ const content = {
         icon: Lightbulb,
         title: "Innovation",
         description:
-        "Staying ahead with the latest technologies and best practices.",
+        "Staying ahead with the modern designs and best practices.",
     },
     ],
-    mission: `"My mission is to create digital experiences that are not just
-            functional, but truly delightful products that users love to
-            use and developers love to maintain."`
+    mission: `"My mission is to create designs and user interfaces that not just pretty to look at, 
+            but are creative and meaningful and bring joy to the ones interacting with it."`
   }
 };
 
@@ -103,7 +97,7 @@ export const About = ({ mode }) => {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                            Building the future,
+                            {data.header}
                             <span className="font-serif italic font-normal text-white"> one component at a time.</span>
                         </h2>
                         <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">

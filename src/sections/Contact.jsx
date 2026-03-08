@@ -28,14 +28,12 @@ const content = {
     software: {
         h1: `Let's build${" "}`,
         h2: `something great`,
-        pdesc: "Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can work together.",
-        cdesc: "I'm currently open to new opportunities and exciting projects. Whether you need a full-time engineer or a freelance consultant, let's talk!",
+        pdesc: "I'm currently open to new opportunities. Whether you need a full-time engineer or a remote worker, let's talk!",
     },
     designer: {
         h1: `Let's suggest${" "}`,
         h2: `a design`,
-        pdesc: "Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can work together.",
-        cdesc: "I'm currently open to new opportunities and exciting projects. Whether you need a full-time engineer or a freelance consultant, let's talk!",
+        pdesc: "I'm currently open to new opportunities. Whether you need a full-time designer or a part-time helper, let's talk!",
     }
 }
 
@@ -117,7 +115,7 @@ export const Contact = ({ mode }) => {
                         </span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                        {data.pdesc}
+                        Have something to discuss with me? I'd love to hear about it. Send me a message and sort this thing out.
                     </p>
                 </div>
 
@@ -248,7 +246,7 @@ export const Contact = ({ mode }) => {
                             <span className="font-medium">Currently Available</span>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                            {data.cdesc}
+                            {data.pdesc}
                         </p>
                         </div>
                     </div>
