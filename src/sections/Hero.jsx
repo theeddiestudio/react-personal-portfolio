@@ -6,6 +6,8 @@ const content = {
   software: {
     badge1: "Software Engineer",
     badge2: "Fullstack Developer",
+    cvPath: "/software.pdf",
+    cvName: "Ashwin_Dhakal_Software_CV.pdf",
     exp: "2+",
     sub: "Namaste, I'm Ashwin Dhakal — A Fullstack Software Developer specializing in MERN/PERN Stacks. I build responsive websites that users love.",
     skills: [
@@ -32,6 +34,8 @@ const content = {
   designer: {
     badge1: "Graphics Designer",
     badge2: "UI/UX Designer",
+    cvPath: "/designer.pdf",
+    cvName: "Ashwin_Dhakal_Designer_CV.pdf",
     exp: "5+",
     sub: "Namaste, I'm Ashwin Dhakal — A Graphic & UI/UX Designer specializing in Figma and Brand Identity. I create stunning visuals that convert.",
     skills: [
@@ -119,9 +123,11 @@ export const Hero = ({ mode }) => {
                     {/* CTAs */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-400">
                         <a href="#contact"><Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /></Button></a>
-                        <AnimatedBorderButton>
-                            <Download className="w-5 h-5" />Download CV
-                        </AnimatedBorderButton>
+                        <a href={data.cvPath} download={data.cvName} className="inline-block">
+                            <AnimatedBorderButton>
+                                <Download className="w-5 h-5" />Download CV
+                            </AnimatedBorderButton>
+                        </a>
                     </div>
 
                     { /* Social Media */}
