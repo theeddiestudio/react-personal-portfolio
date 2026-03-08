@@ -90,7 +90,7 @@ export const Hero = ({ mode }) => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 
                 {/* Left Column - Text content */}
-                <div className="space-y-8">
+                <div className="space-y-8 order-2 md:order-1">
                     <div className="animate-fade-in">
                         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
@@ -118,7 +118,7 @@ export const Hero = ({ mode }) => {
 
                     {/* CTAs */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-400">
-                        <Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /></Button>
+                        <a href="#contact"><Button size="lg">Contact Me <ArrowRight className="w-5 h-5" /></Button></a>
                         <AnimatedBorderButton>
                             <Download className="w-5 h-5" />Download CV
                         </AnimatedBorderButton>
@@ -147,10 +147,10 @@ export const Hero = ({ mode }) => {
                 </div>
 
                 {/* Right Column - Profile Image */}
-                <div className="relative animate-fade-in animation-delay-300">
+                <div className="relative animate-fade-in animation-delay-300 order-1 md:order-2">
 
                     {/* Profile Image */}
-                    <div className="relative max-w-md mx-auto">
+                    <div className="relative w-60 sm:w-72 md:w-96 lg:w-[420px] mx-auto">
                         <div
                             className="absolute inset-0 
                             rounded-3xl bg-gradient-to-br 
@@ -161,17 +161,17 @@ export const Hero = ({ mode }) => {
                             <img src="/ashwin-full.png" alt="Ashwin Dhakal" className="w-full object-cover rounded-2xl"/>
                         
                             {/* Floating Badge */}
-                            <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                            <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float">
                                 <div className="flex items-center gap-3">
                                     <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
                                     {/* <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" /> */}
-                                    <span className="text-sm font-medium">Already Employed</span>
+                                    <span className="text-xs md:text-sm font-medium">Already Employed</span>
                                 </div>
                             </div>
 
                             {/* Stats Badge */}
-                            <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                                <div className="text-2xl font-bold text-primary">{data.exp}</div>
+                            <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float animation-delay-500">
+                                <div className="text-lg md:text-2xl font-bold text-primary">{data.exp}</div>
                                     <div className="text-xs text-muted-foreground">
                                         Years Exp.
                                     </div>
@@ -199,7 +199,7 @@ export const Hero = ({ mode }) => {
                     </div>
                 </div>
             </div>
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 hidden md:block">
                 <a
                 href="#about"
                 className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"

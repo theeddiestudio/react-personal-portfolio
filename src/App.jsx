@@ -1,45 +1,59 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { Navbar } from '@/layout/Navbar'
-import { Footer } from '@/layout/Footer'
-import { Hero } from '@/sections/Hero'
-import { About } from '@/sections/About'
-import { Experience } from '@/sections/Experience'
-import { Projects } from '@/sections/Projects'
-import { Testimonials } from '@/sections/Testimonials'
-import { Contact } from '@/sections/Contact'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Navbar } from '@/layout/Navbar';
+import { Footer } from '@/layout/Footer';
+import { Hero } from '@/sections/Hero';
+import { About } from '@/sections/About';
+import { Experience } from '@/sections/Experience';
+import { Projects } from '@/sections/Projects';
+import { Gallery } from '@/sections/Gallery';
+import { Testimonials } from '@/sections/Testimonials';
+import { Contact } from '@/sections/Contact';
+import Landing from '@/pages/Landing';
+import Missing from '@/pages/Missing';
 
-function PortfolioContent() {
-  const location = useLocation();
-  const mode = location.pathname.includes('designer') ? 'designer' : 'software';
+const PortfolioLayout = ({ mode }) => {
+  const isDesigner = mode === 'designer';
 
   return (
     <div className='min-h-screen overflow-x-hidden'>
-      {/* Pass mode to every component so they know what to display */}
       <Navbar mode={mode} />
       <main>
         <Hero mode={mode} />
         <About mode={mode} />
-        <Experience mode={mode} />
-        <Projects mode={mode} />
+
+        {isDesigner ? (
+          <>
+            {/* Designer: Gallery then Experience */}
+            <Gallery mode={mode}/>
+            <Experience mode={mode} />
+          </>
+        ) : (
+          <>
+            {/* Software: Experience first, then Projects */}
+            <Experience mode={mode} />
+            <Projects mode={mode}/>
+          </>
+        )}
+
         <Testimonials mode={mode} />
         <Contact mode={mode} />
       </main>
       <Footer />
     </div>
   );
-}
+};
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* This catches ashwind.com.np/designer */}
-        <Route path="/designer" element={<PortfolioContent />} />
-        {/* This catches ashwind.com.np/ and everything else */}
-        <Route path="*" element={<PortfolioContent />} />
+        <Route path="/" element={<><Landing /><Footer /></>} />
+        <Route path="/software" element={<PortfolioLayout mode="software" />} />
+        <Route path="/designer" element={<PortfolioLayout mode="designer" />} />
+        <Route path="*" element={<><Missing /><Footer /></>} />
       </Routes>
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;

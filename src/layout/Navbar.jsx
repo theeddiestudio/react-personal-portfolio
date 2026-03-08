@@ -2,14 +2,29 @@ import { Button } from "@/components/Button"
 import { Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
 
-const navLinks = [
-    {href: "#about", label:"About"},
-    {href: "#experience", label:"Experience"},
-    {href: "#projects", label:"Projects"},
-    {href: "#testimonials", label:"Testimonials"},
-]
+const content = {
+    software: {
+        navs: [
+        {href: "#about", label:"About"},
+        {href: "#experience", label:"Experience"},
+        {href: "#projects", label:"Projects"},
+        {href: "#testimonials", label:"Testimonials"},
+        ]
+    },
+    designer: {
+        navs: [
+        {href: "#about", label:"About"},
+        {href: "#gallery", label:"Gallery"},
+        {href: "#experience", label:"Experience"},
+        {href: "#testimonials", label:"Testimonials"},
+        ]
+    },
+}
 
-export const Navbar = () => {
+export const Navbar = ({ mode }) => {
+    const data = content[mode];
+    const navLinks = data.navs;
+
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -40,7 +55,9 @@ export const Navbar = () => {
 
            {/* CTA Button - Call to Action */}
            <div className="hidden md:block">
-                <Button size="sm">Contact Me</Button>
+                <a href="#contact">
+                    <Button size="sm">Contact Me</Button>
+                </a>
            </div>
 
            {/* Mobile Menu Button - only on small screen */}
