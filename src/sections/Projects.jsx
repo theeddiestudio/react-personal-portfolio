@@ -1,10 +1,7 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
-const content = {
-  software: {
-    pdesc: "A selection of my recent work, from complex web applications to innovative tools that solve real-world problems.",
-    pjs: [
+const projects = [
     {
         title: "Fintech Dashboard",
         description:
@@ -41,20 +38,7 @@ const content = {
         link: "#",
         github: "#",
     },
-    ],
-  },
-  designer: {
-    pdesc: "A selection of my recent work, from complex web applications to innovative tools that solve real-world problems.",
-    pjs: [
-    {
-        title: "Fintech Dashboard",
-        description:
-        "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-        image: "/projects/project1.png",
-        tags: ["React", "Typescript", "NodeJS"],
-        link: "#",
-        github: "#",
-    },
+    
     {
         title: "E-Commerce Platform",
         description:
@@ -73,22 +57,9 @@ const content = {
         link: "#",
         github: "#",
     },
-    {
-        title: "Project Management Tool",
-        description:
-        "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-        image: "/projects/project4.png",
-        tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-        link: "#",
-        github: "#",
-    },
-    ],
-  }
-};
+];
 
 export const Projects = ({ mode }) => {
-    const data = content[mode];
-    const projects = data.pjs;
 
     return (
         <section id="projects" className="py-32 relative overflow-hidden">
@@ -101,12 +72,12 @@ export const Projects = ({ mode }) => {
                 
                 {/* Section Header */}
                 <div className="text-center mx-auto max-w-3xl mb-16">
-                    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">Featured Work</span>
+                    <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">Featured Works</span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">Projects that
                         <span className="font-serif italic font-normal text-white"> make an impact.</span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                        {data.pdesc}
+                        A selection of my recent work, from complex web applications to innovative tools that solve real-world problems.
                     </p>
                 </div>
 
@@ -180,13 +151,13 @@ export const Projects = ({ mode }) => {
                     ))}
                     </div>
 
-                    {/* View All CTA */}
+                    {/* View All CTA
                     <div className="text-center mt-12 animate-fade-in animation-delay-500">
                     <AnimatedBorderButton>
                         View All Projects
                         <ArrowUpRight className="w-5 h-5" />
                     </AnimatedBorderButton>
-                </div>
+                </div> */}
             </div>
         </section>
     )

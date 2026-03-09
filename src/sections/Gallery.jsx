@@ -2,10 +2,40 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const images = [
-    { src: "/designs/1.png", title: "Brand Identity Mockup" },
-    { src: "/designs/2.png", title: "Mobile App UI" },
-    { src: "/designs/3.png", title: "Web Design Concept" },
-    { src: "/designs/4.png", title: "Web Design Concept" },
+    { src: "/designs/1.webp", title: "Food Kitchen UI" },
+    { src: "/designs/2.webp", title: "ERC Girls Society Logo" },
+    { src: "/designs/3.webp", title: "Enunciators Hub Logo" },
+    { src: "/designs/4.webp", title: "Leo Dashain Banner" },
+    { src: "/designs/5.webp", title: "World Tour with Saigrace Banner" },
+    { src: "/designs/6.webp", title: "Enunciators Hub Representative Call" },
+    { src: "/designs/7.webp", title: "Champion in You Banner" },
+    { src: "/designs/8.webp", title: "Food Kitchen UI" },
+    { src: "/designs/9.webp", title: "Leo Dashain Event Banner" },
+    { src: "/designs/10.webp", title: "Food Kitchen UI" },
+    { src: "/designs/11.webp", title: "Robotics Club Certificate" },
+    { src: "/designs/12.webp", title: "Delta 2.0 Facebook Badge" },
+    { src: "/designs/13.webp", title: "Leo Club Membership Post" },
+    { src: "/designs/14.webp", title: "ANNFSU Tuition Poster" },
+    { src: "/designs/15.webp", title: "Vector Art 01" },
+    { src: "/designs/16.webp", title: "Vector Art 02" },
+    { src: "/designs/17.webp", title: "Saigrace Sponsors Banner" },
+    { src: "/designs/18.webp", title: "Food Kitchen Full UI" },
+    { src: "/designs/19.webp", title: "Leo Club Facts Post" },
+    { src: "/designs/20.webp", title: "Leo Club MRR Anniversary Banner" },  
+    { src: "/designs/21.webp", title: "Robotics Club Training Post" },
+    { src: "/designs/22.webp", title: "Robotics Club Training Post" },
+    { src: "/designs/23.webp", title: "Robotics Club Training Post" },
+    { src: "/designs/24.webp", title: "Food Kitchen Full UI" },
+    { src: "/designs/25.webp", title: "Isometric 3D Room Model" },
+    { src: "/designs/26.webp", title: "TSAN Krishna Janmasthami Post" },
+    { src: "/designs/27.webp", title: "TSAN Teej Post" },
+    { src: "/designs/28.webp", title: "ANNFSU Dashain Post" },
+    { src: "/designs/29.webp", title: "Enunciators Hub Open Platform Banner" },
+    { src: "/designs/30.webp", title: "ANNFSU Debate Competition Post" },
+    { src: "/designs/31.webp", title: "International Leo Day Design" },
+    { src: "/designs/32.webp", title: "BEI Welcome Program Banner" },
+    { src: "/designs/33.webp", title: "Robotics Club Training Post" },
+    { src: "/designs/34.webp", title: "Food Kitchen Full UI" },
 ];
 
 // Fullscreen Viewer Sub-component
@@ -112,9 +142,29 @@ const FullscreenViewer = ({ src, alt, onClose }) => {
     );
 };
 
-export const Gallery = ({ mode }) => {
+export const Gallery = () => {
     const [activeIdx, setActiveIdx] = useState(0);
     const [isFullscreen, setIsFullscreen] = useState(false);
+
+    // Preload Images
+    useEffect(() => {
+        const bufferSize = 7;
+        const totalImages = images.length;
+        
+        const indicesToPreload = [];
+        for (let i = 1; i <= bufferSize; i++) {
+            // 7 Images to the right (Next)
+            indicesToPreload.push((activeIdx + i) % totalImages);
+            // 7 Images to the left (Previous)
+            indicesToPreload.push((activeIdx - i + totalImages) % totalImages);
+        }
+
+        // Hidden Image objects for Cache
+        indicesToPreload.forEach((idx) => {
+            const img = new Image();
+            img.src = images[idx].src;
+        });
+    }, [activeIdx]);
 
     const next = () => {
         setActiveIdx((prev) => (prev + 1) % images.length);
@@ -136,12 +186,12 @@ export const Gallery = ({ mode }) => {
                     {/* Section Header */}
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-                            Gallery of Designs
+                            Designs Preview
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-                            Designs{" "}
+                            Gallery of{" "}
                             <span className="font-serif italic font-normal text-white">
-                                Preview
+                                Featured Works
                             </span>
                         </h2>
                     </div>
@@ -161,9 +211,11 @@ export const Gallery = ({ mode }) => {
                                     {/* The Design Image */}
                                     <img 
                                         key={activeIdx}
-                                        src={images[activeIdx].src} 
+                                        src={images[activeIdx].src}
+                                        loading="eager"
+                                        fetchpriority="high" 
                                         alt={images[activeIdx].title || "Gallery Image"} 
-                                        className="w-full h-full object-cover animate-fade-in transition-transform duration-700 group-hover:scale-105"
+                                        className="w-full h-full object-contain animate-fade-in transition-transform duration-700 group-hover:scale-105"
                                     />
 
                                     {images[activeIdx].title && (

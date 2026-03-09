@@ -3,39 +3,39 @@ const content = {
     pdesc: "A timeline of my professional growth, from curious beginner to established developer building products at high scale and rapid rate.",
     exps: [
     {
-        period: "2022 — Present",
-        role: "Senior Frontend Engineer",
-        company: "Tech Innovators Inc.",
+        period: "2025 — 2026",
+        role: "Junior Designer",
+        company: "Masta Kala Crafts",
         description:
-        "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-        technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
-        current: true,
-    },
-    {
-        period: "2020 — 2022",
-        role: "Frontend Engineer",
-        company: "Digital Solutions Co.",
-        description:
-        "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-        technologies: ["React", "Redux", "Jest", "Cypress"],
+        "Designed over 50 event oriented designs for websites and products.",
+        technologies: ["Illustrator", "Canva"],
         current: false,
     },
     {
-        period: "2019 — 2020",
-        role: "Junior Developer",
-        company: "StartUp Labs",
-        description:
-        "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-        technologies: ["React", "Node.js", "MongoDB", "AWS"],
-        current: false,
-    },
-    {
-        period: "2018 — 2019",
+        period: "2024 — 2025",
         role: "Freelance Developer",
         company: "Self-Employed",
         description:
-        "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-        technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+        "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications.",
+        technologies: ["React", "Node.js", "WordPress", "Flutter", "MongoDB", "Docker"],
+        current: false,
+    },
+    {
+        period: "2021 — 2023",
+        role: "IT Head",
+        company: "Enunciators' Hub",
+        description:
+        "Created web designs as well as website pages for the organisation. Hosted over 10 massive events and created over 20 designs.",
+        technologies: ["HTML", "JavaScript", "Wordpress", "Figma", "Docker"],
+        current: false,
+    },
+    {
+        period: "2021 — 2022",
+        role: "Social Media Manager",
+        company: "Leo Club of Itahari Professionals [Engineering]",
+        description:
+        "Contributed to the organisation with designs and websites and learned leadership, collaboration and time managament in the process.",
+        technologies: ["HTML", "JavaScript", "Figma", "Linux", "Docker"],
         current: false,
     },
     ],
@@ -43,40 +43,49 @@ const content = {
   designer: {
     pdesc: "A timeline of my professional growth, from beginner designer to experienced creator producing designs at high scale and rapid rate.",
     exps: [
-        {
-        period: "2022 — Present",
-        role: "Senior Frontend Engineer",
-        company: "Tech Innovators Inc.",
-        description:
-        "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-        technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
-        current: true,
-    },
     {
-        period: "2020 — 2022",
-        role: "Frontend Engineer",
-        company: "Digital Solutions Co.",
+        period: "2025 — 2026",
+        role: "Junior Graphic Designer",
+        company: "Masta Kala Crafts",
         description:
-        "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-        technologies: ["React", "Redux", "Jest", "Cypress"],
+        "Designed and created over 50 event oriented designs and banners including screen banners as well as printed banners. Designed over 300 products with customisation and personalisation. Created over 15 promotional videos for social media.",
+        technologies: ["Illustrator", "Canva", "Photoshop", "Corel Draw", "Blender3D", "Premiere Pro"],
         current: false,
     },
     {
-        period: "2019 — 2020",
-        role: "Junior Developer",
-        company: "StartUp Labs",
+        period: "2022 — 2025",
+        role: "Technical Advisor and Designer",
+        company: "All Nepal National Free Students' Union",
         description:
-        "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-        technologies: ["React", "Node.js", "MongoDB", "AWS"],
+        "Crafted over 100 political designs, event certificates, election posters, flyers and stickers. Created over 10 promotional videos and over 75 banners for elections and events including screen banners as well as printed banners.",
+        technologies: ["Illustrator", "Canva", "Photoshop", "Figma", "Filmora"],
         current: false,
     },
     {
-        period: "2018 — 2019",
-        role: "Freelance Developer",
+        period: "2021 — 2022",
+        role: "Social Media Incharge",
+        company: "Leo Club of Itahari Professionals [Engineering]",
+        description:
+        "Created the brand identities and 30+ banners and certificates within LY 2021/2022. Took part in 20+ Events hosted by the organisation at Itahari, and learnt leadership, collaboration and time management.",
+        technologies: ["Illustrator", "Figma", "Filmora"],
+        current: false,
+    },
+    {
+        period: "2021 — 2022",
+        role: "Designer Head",
+        company: "Enunciators' Hub",
+        description:
+        "Designed brand identities and flex for the organisation leading to 25% increase in brand recognition and engagement. Hosted the Saigrace World Tour Event, which attracted more than 200 attendees.",
+        technologies: ["Illustrator", "Photoshop"],
+        current: false,
+    },
+    {
+        period: "2020 — 2021",
+        role: "Freelance Graphic Designer",
         company: "Self-Employed",
         description:
-        "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-        technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+        "Learned through various online platforms about designing, typography and color theory and volunteered myself for designs and creations.",
+        technologies: ["Illustrator", "Photoshop", "Picsart"],
         current: false,
     },
     ],

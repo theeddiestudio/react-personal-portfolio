@@ -23,6 +23,7 @@ const content = {
         "PostgreSQL",
         "MongoDB",
         "Python",
+        "Wordpress",
         "Docker",
         "C-Sharp",
         "ExpressJS",

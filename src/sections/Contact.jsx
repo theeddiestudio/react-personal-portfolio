@@ -119,7 +119,7 @@ export const Contact = ({ mode }) => {
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
