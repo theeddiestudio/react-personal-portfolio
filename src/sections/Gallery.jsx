@@ -229,27 +229,44 @@ export const Gallery = () => {
                             </div>
 
                             {/* Carousel Navigation */}
-                            <div className="flex items-center justify-center gap-4 mt-8">
-                                <button className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all" onClick={previous}>
-                                    <ChevronLeft className="w-6 h-6" />
-                                </button>
+                            <div className="flex flex-col items-center gap-6 mt-10 w-full max-w-4xl mx-auto px-4">
                                 
-                                <div className="flex gap-2">
+                                {/* Dots Container*/}
+                                <div className="flex flex-wrap items-center justify-center gap-2 w-full max-w-full">
                                     {images.map((_, idx) => (
                                         <button 
                                             key={idx} 
-                                            className={`h-2 rounded-full transition-all duration-300 ${idx === activeIdx ? "w-8 bg-primary" : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"}`} 
+                                            className={`h-2 rounded-full transition-all duration-300 shadow-sm
+                                                ${idx === activeIdx 
+                                                    ? "w-8 bg-primary" 
+                                                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/60"}`} 
                                             onClick={() => setActiveIdx(idx)} 
                                             aria-label={`Go to slide ${idx + 1}`}
                                         />
                                     ))}
                                 </div>
 
-                                <button className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all" onClick={next}>
-                                    <ChevronRight className="w-6 h-6" />
-                                </button>
+                                {/* Primary Controls*/}
+                                <div className="flex items-center justify-center gap-8">
+                                    <button 
+                                        className="group p-4 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all active:scale-90" 
+                                        onClick={previous}
+                                    >
+                                        <ChevronLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
+                                    </button>
+                                    
+                                    <span className="text-sm font-mono text-muted-foreground bg-secondary/20 px-3 py-1 rounded-full">
+                                        {activeIdx + 1} / {images.length}
+                                    </span>
+
+                                    <button 
+                                        className="group p-4 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all active:scale-90" 
+                                        onClick={next}
+                                    >
+                                        <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
