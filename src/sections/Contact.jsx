@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Kathmandu, Nepal",
+    value: "Itahari, Nepal",
     href: "#",
   },
 ];

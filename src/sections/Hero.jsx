@@ -3,10 +3,10 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { ArrowRight, ChevronDown, Download, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 const socialLinks = [
-  { icon: Mail, href: "mailto:dkashwin576@gmail.com"},
+  { icon: Mail, href: "mailto:ashwin.dhakal007@gmail.com"},
   { icon: Linkedin, href: "https://www.linkedin.com/in/ashwindhakal007"},
   { icon: Github, href: "https://github.com/theeddiestudio"},
-  { icon: MessageCircle, href: "https://wa.me/9844888978"},
+  { icon: MessageCircle, href: "https://wa.me/9824747665"},
 ];
 
 const content = {
@@ -159,9 +159,9 @@ export const Hero = ({ mode }) => {
                             {/* Floating Badge */}
                             <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
-                                    {/* <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" /> */}
-                                    <span className="text-xs md:text-sm font-medium">Already Employed</span>
+                                    {/* <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" /> */}
+                                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                                    <span className="text-xs md:text-sm font-medium">Available for Works</span>
                                 </div>
                             </div>
 

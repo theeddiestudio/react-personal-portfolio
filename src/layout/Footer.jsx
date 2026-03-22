@@ -1,10 +1,10 @@
 import { Mail, MessageCircle, Github, Linkedin } from "lucide-react";
 
 const socialLinks = [
-  { icon: Mail, href: "mailto:dkashwin576@gmail.com"},
+  { icon: Mail, href: "mailto:ashwin.dhakal007@gmail.com"},
   { icon: Linkedin, href: "https://www.linkedin.com/in/ashwindhakal007"},
   { icon: Github, href: "https://github.com/theeddiestudio"},
-  { icon: MessageCircle, href: "https://wa.me/9844888978"},
+  { icon: MessageCircle, href: "https://wa.me/9824747665"},
 ];
 
 export const Footer = () => {
